@@ -9140,7 +9140,7 @@ html:not(.lt-ie10) .not-animated {
 	position: fixed;
 	right: 15px;
 	bottom: 15px;
-	z-index: 100;
+	z-index: 300;
 	width: 48px;
 	height: 48px;
 	border-radius: 6px;
