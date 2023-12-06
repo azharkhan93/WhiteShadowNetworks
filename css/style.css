@@ -6893,6 +6893,11 @@ html:not(.tablet):not(.mobile) .profile-minimal-caption {
 	.timeline-classic-item * + .heading-4 {
 		margin-top: 30px;
 	}
+	/* .jumbotron-classic-content{
+		padding: 140px 0;
+	}
+	 */
+
 }
 
 /*
@@ -6964,12 +6969,13 @@ html:not(.tablet):not(.mobile) .profile-minimal-caption {
 	* + .career-classic-divider {
 		margin-top: 20px;
 	}
+
+	.jumbotron-classic-content {
+		/* margin-top: 30px; */
+		 padding: 190px 0 80px  0; 
+	}
 	* + .career-classic-list {
 		margin-top: 20px;
-	}
-	.jumbotron-classic-content {
-		margin-top: 30px;
-		
 	}
 }
 
