@@ -17952,29 +17952,35 @@ body{
 } */
 
 .about-section{
-	margin-top: -20px;
-    background: url(https://blogger.googleusercontent.com/img/a/AVvXsEjJY2eoN_CFDR1Qg9VTmTaEm586O-j4tWG8pG3nN-36kQqK1MR2kdze2MLWQlsOU2FKIbGAafhBvFXovlMunIw3yTB_TT-RYlDKEUxiyZUOG5C0QqeQPKfxulMy8rbGHKXylkve7MRDKtWpEYfDLF6LHgVeG5rUxS6In7mv-TWOA6cWAqsCMXq9San5) no-repeat left;
-    background-size: 55%;
+	
+	/* margin-top: -20px; */
+    background: url('/images/who.jpeg') no-repeat left;
+    background-size: 60%;
     background-color: #fdfdfd;
     overflow: hidden;
-    padding: 100px 0;
+    /* padding: 100px 0; */
+	 /* border-radius: 15px;  */
 }
 
 .inner-container{
-    width: 55%;
+    width: 60%;
     float: right;
-    background-color: #fdfdfd;
-    padding: 150px;
+    background-color: bisque;
+	/* box-shadow: #000000; */
+    padding: 100px;
+	border-radius: 5px;
 }
 
 .inner-container h1{
+	color: #007aff;
+	text-decoration: underline;
     margin-bottom: 30px;
     font-size: 30px;
     font-weight: 900;
 }
 
 .text{
-    font-size: 13px;
+    font-size: 15px;
     color: #545454;
     line-height: 30px;
     text-align: justify;

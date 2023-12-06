@@ -29,13 +29,13 @@
   padding: 1rem;
 } */
 
-    h1 {
+.pro {
       text-align: center;
       padding: 1rem 0;
       color: blue;
     }
 
-    .tabBtns {
+    .Btns {
       text-align: center;
       padding-bottom: 1rem;
     }
@@ -61,7 +61,23 @@
       flex-wrap: wrap;
     }
 
+    .project img {
+  /* width: 100%;
+  height: auto; */
+  border-radius: 12px; /* Adjust the value as needed */
+}
+
+.project {
+  border-radius: 12px;
+  position: relative;
+  width: 400px;
+  margin: 0 1rem 1rem 0;
+}
+
     .project {
+      /* border: yellow; */
+      border-radius: 12px;
+      border: 12px;
       position: relative;
       width: 400px;
       margin: 0 1rem 1rem 0;
@@ -92,6 +108,17 @@
     .project-info p {
       padding-bottom: 1rem;
     }
+    @media (max-width: 768px) {
+  .projects-container {
+    display: block; 
+    text-align: center; 
+  }
+
+  .project {
+    width: 100%; 
+    margin-bottom: 1rem; 
+  }
+}
   </style>
 </head>
 
@@ -161,7 +188,7 @@
                   </li>
                   <li class="rd-nav-item"><a class="rd-nav-link" href="our-services.html">Services</a>
                   </li>
-                  <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">Contacts</a>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">Contact us</a>
                   </li>
                 </ul>
               </div>
@@ -272,12 +299,8 @@
               <div class="item box">
                 <img src="images/vlcc.png" alt="client logo" class="client-img">
               </div>
-              <div class="item box">
-                <img src="images/ting.png" alt="client logo" class="client-img">
-              </div>
-              <div class="item box">
-                <img src="images/vin.png" alt="client logo" class="client-img">
-              </div>
+              
+              
               <div class="item box">
                 <img src="images/ring.png" alt="client logo" class="client-img">
               </div>
@@ -289,6 +312,12 @@
               </div>
               <div class="item box">
                 <img src="images/running.png" alt="client logo" class="client-img">
+              </div>
+              <div class="item box">
+                <img src="images/ting.png" alt="client logo" class="client-img">
+              </div>
+              <div class="item box">
+                <img src="images/vin.png" alt="client logo" class="client-img" style="border-radius: 12px;">
               </div>
             </div>
           </div>
@@ -453,8 +482,11 @@
             <div class="single-service">
               <div class="content">
                 <span class="icon">
-                  <i class="fab fa-battle-net"></i>
+                  <i class="fas fa-chart-pie"></i>
                 </span>
+                <!-- <span class="icon">
+                  <i class="fab fa-battle-net"></i>
+                </span> -->
                 <h3 class="title">Social Media Set-up & Management.</h3>
                 <p class="description">Our social media experts will develop and execute strategic social media
                   campaigns to increase brand visibility, drive engagement, and cultivate a loyal online community.</p>
@@ -469,8 +501,11 @@
             <div class="single-service">
               <div class="content">
                 <span class="icon">
-                  <i class="fab fa-asymmetrik"></i>
+                  <i class="fab fa-500px"></i>
                 </span>
+                <!-- <span class="icon">
+                  <i class="fab fa-asymmetrik"></i>
+                </span> -->
                 <h3 class="title"> Event Management</h3>
                 <p class="description">From product launches to press conferences, our event management team will ensure
                   seamless execution, capturing attention and garnering wide media coverage.</p>
@@ -485,8 +520,11 @@
             <div class="single-service">
               <div class="content">
                 <span class="icon">
-                  <i class="fab fa-artstation"></i>
+                  <i class="fas fa-chart-pie"></i>
                 </span>
+                <!-- <span class="icon">
+                  <i class="fab fa-artstation"></i>
+                </span> -->
                 <h3 class="title">Crisis Managent</h3>
                 <p class="description">In times of reputational risk, we provide swift and strategic crisis management
                   support, aiming to protect your brand's image and navigate sensitive situations effectively.</p>
@@ -533,8 +571,11 @@
             <div class="single-service">
               <div class="content">
                 <span class="icon">
-                  <i class="fas fa-laptop-code"></i>
+                  <i class="fab fa-500px"></i>
                 </span>
+                <!-- <span class="icon">
+                  <i class="fas fa-laptop-code"></i>
+                </span> -->
                 <h3 class="title">Media
                   Realtions</h3>
                 <p class="description">We have built strong relationships with key media outlets and influencers,
@@ -564,9 +605,9 @@
 
 
     <!-- <div class="container" ></div> -->
-    <h1>Project Section</h1>
+    <h1 class="pro">Project Section</h1>
 
-    <div class="tabBtns">
+    <div class="Btns">
       <button id="all" class="active tab-btn" style="color: blue;">All</button>
       <button id="design" class="tab-btn">Design</button>
       <button id="fullstack" class="tab-btn">Advertising</button>
@@ -575,17 +616,17 @@
 
     <div class="projects-container">
       <div class="project">
-        <img src="images/portfolio-1.jpg" alt="" />
+        <!-- <img src="images/portfolio-1.jpg" alt="" />
         <div class="project-info">
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           <div class="project-btns">
             <button>Live</button>
             <button>Code</button>
           </div>
-        </div>
+        </div> -->
       </div>
-      <div class="project">
-        <img src="images/portfolio-1.jpg" alt="" />
+      <!-- <div class="project" >
+        <img src="images/portfolio-1.jpg" alt="" style="border-radius: 12px;" />
         <div class="project-info">
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           <div class="project-btns">
@@ -600,7 +641,7 @@
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           <div class="project-btns">
             <button>Live</button>
-            <!-- <button>Code</button> -->
+            
           </div>
         </div>
       </div>
@@ -610,21 +651,21 @@
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           <div class="project-btns">
             <button>Live</button>
-            <!-- <button>Code</button> -->
+            
           </div>
         </div>
-      </div>
-      <div class="project">
+      </div> -->
+      <!-- <div class="project">
         <img src="images/portfolio-1.jpg" alt="" />
         <p style="color: blueviolet; margin-top: -1px;">Lorem ipsum dolor sit amet.</p>
         <div class="project-info">
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           <div class="project-btns">
             <button>Live</button>
-            <!-- <button>Code</button> -->
+            
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 
@@ -1063,10 +1104,10 @@
           <div>
             <ul class="list-nav">
               <li><a href="/">Home</a></li>
-              <li><a href="about-us.html">About</a></li>
+              <li><a href="about-us.html">About us</a></li>
               <li><a href="our-services.html">Services</a></li>
               <!-- <li><a href="#">Blog</a></li> -->
-              <li><a href="contacts.html">Contacts</a></li>
+              <li><a href="contacts.html">Contact us</a></li>
             </ul>
           </div>
           <div>
@@ -1087,7 +1128,7 @@
     </div>
     <div class="footer-advanced-aside">
       <div class="container">
-        <div class="footer-advanced-layout"><a class="brand" href="index.html"><img style="border-radius: 14px;" src="images/shadow.jpg" alt=""
+        <div class="footer-advanced-layout"><a class="brand" href="index.html"><img style="border-radius: 14px;" src="images/shadow.png" alt=""
               width="115" height="34" srcset="images/whiteshadow.jpg 2x" /></a>
           <!-- Rights-->
           <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span> All Rights Reserved. Design
