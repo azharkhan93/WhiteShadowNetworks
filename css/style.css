@@ -6972,7 +6972,7 @@ html:not(.tablet):not(.mobile) .profile-minimal-caption {
 
 	.jumbotron-classic-content {
 		/* margin-top: 30px; */
-		 padding: 190px 0 80px  0; 
+		 /* padding: px 0 80px  0;  */
 	}
 	* + .career-classic-list {
 		margin-top: 20px;
@@ -7134,14 +7134,14 @@ html:not(.tablet):not(.mobile) .profile-minimal-caption {
 
 @media (max-width: 1599.98px) {
 	.jumbotron-classic-content {
-		padding: 140px 0;
+		padding: 120px 0;
 	}
 }
 
 @media (max-width: 767.98px) {
 	.jumbotron-classic-content {
 		margin-top: 30px;
-		 padding: 190px 0 80px  0; 
+		 padding: 60px 0 80px  0; 
 	}
 }
 
