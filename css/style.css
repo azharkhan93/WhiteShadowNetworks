@@ -10364,7 +10364,7 @@ html.tablet .ui-to-top {
 
 .rd-navbar-fixed [class*='rd-navbar-fixed-element'] {
 	position: fixed;
-	top: 8px;
+	top: 20px;
 	z-index: 1082;
 }
 
