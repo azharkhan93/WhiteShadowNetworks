@@ -14,183 +14,115 @@
     
     <style>
       
-      /* Fonts */
-/* @import url(https://fonts.googleapis.com/css?family=Lato:300,400,700); */
-
-/* icons */
-@import url(http://weloveiconfonts.com/api/?family=iconicfill);
-
-
-
-
-
-
-
-/* * { margin: 0; padding: 0; box-sizing: border-box; position: relative; } */
-
-
-body {
-  background: #f7f7f7;
-  /* color: #fff; */
-  font: 400 87.5%/1.5em 'Lato', sans-serif !important;
+      .pricing{
+        margin: 0;
+  padding: 20px;
+  /* min-height: 100vh; */
+  background-color: white;
+  font-family: "Mulish", sans-serif;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+      }
+.card {
+  width: 350px;
+  margin: 20px;
+  background-color: #ffffff;
+  border: 1px solid #dae1f5;
+  border-radius: 10px;
 }
 
-/* layout */
-.wrapper {
-	max-width: 1140px;
-	margin: 1.5em auto;
-  padding: 0 1.5em;
+.card .header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 40px 50px;
+  background-color: #f7f8fc;
+  border-radius: 10px 10px 0 0;
 }
 
-.pricing-table-wrapper
-{
-	margin-left: -3%;
-	max-width: 105%;
+.card .header .license {
+  display: block;
+  color: #10182f;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: capitalize;
+  text-align: center;
+  margin-bottom: 27px;
 }
 
-.pricing-table 
-{
-  background: #fff;
-  border-radius: 6px;
-  border: 1px solid #e8e8e8;
-  border-bottom: 2px solid #e8e8e8;
-	display: inline-block;
-  margin-bottom: 1.5em;
-	margin-left: 3%;
-	margin-right: -.25em;
-  min-height: 200px;
-	overflow: hidden;
-	vertical-align: top;
-  width: 30.38%;
-}
-
-/* header */
-.pricing-table-header {
-  background: #565656;
+.card .header h2 {
+  color: #10182f;
+  font-size: 46px;
+  font-weight: 700;
   text-align: center;
 }
 
-.pricing-table-header h1 {
-  color: #fff;
-  font-size: 1.4em;
-  font-weight: 300;
-  letter-spacing: 0.05em;
-  padding: 40px 0;
-}
-
-.pricing-table-header h2 {
-  background: #fAb58e;
-  color: #fff;
-  font-size: 1em;
-  font-weight: 300;
-  letter-spacing: 0.05em;
-  line-height: 50px;
-  height: 50px;
-  text-transform: uppercase;
-}
-
-.popular h1 {
-  padding: 40px 0 10px;
-}
-
-.popular .sub {
-  color: #c4c4c4;
-  text-transform: uppercase;
-  padding-bottom: 24px;
+.card .header .duration {
   display: block;
+  font-size: 20px;
+  line-height: 33px;
+  margin-bottom: 30px;
 }
 
-.strike {
-  color: #447f5e;
-  text-decoration: line-through;
-}
-
-/* list */
-.pricing-table-content {
-  background: #fffcf7;
-  border: 1px solid #e2e1dc;
-  border-bottom-right-radius: 6px;
-  border-bottom-left-radius: 6px;
-  border-top: 0;
-  margin: 0 2em 2em;
-}
-
-.pricing-table-content li {
-  line-height: 1.5;
-  padding: 0.75em 0;
-  width: 100%;
-}
-
-.iconicfill-check {
-  color: #fAb58e;
-  padding: 0 1em 0 1.5em;
-  margin: 0;
-}
-
-.pricing-details {
-  color: #3a3937;
-  font-size: 1.1em;
-  line-height: 3em;
-  list-style: none;
-  padding: 1em 0;
-}
-
-/* button */
-.signup {
-  background: #fAb58e;
-  border: none;
-  border-radius: 6px;
-  color: #fff;
-  cursor: pointer;
-  display: block;
-  font-family: 'Lato', sans-serif;
-  font-size: 0.9em;
+.card .header .btn {
+  padding: 12px 36px;
+  color: #ffffff;
+  background-color: #10182f;
+  border-radius: 5px;
+  font-size: 16px;
   font-weight: 700;
-  letter-spacing: 0.05em;
-  margin: 0 auto 2.250em;
-  padding: 15px 0;
   text-align: center;
   text-decoration: none;
-  text-transform: uppercase;
-  width: 88%;
+  transition: all 0.3s;
 }
 
-/* plan colors */
-.pricing-half-yearly h2, .pricing-half-yearly .signup {
-  background: #db9dea !important;
+.card .header .btn:hover {
+  background-color: #0a0f1e;
 }
 
-.pricing-half-yearly .pricing-details {
-  background: #fff7fc;
+.card .features {
+  padding: 30px 62px 40px;
 }
 
-.pricing-half-yearly .iconicfill-check {
-  color: #db9dea;
+.card .features li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-bottom: 22px;
 }
 
-.pricing-yearly h2, .pricing-yearly .signup {
-  background: #83cea7;
+.card .features li:last-child {
+  margin-bottom: 0;
 }
 
-.pricing-yearly .pricing-details {
-  background: #f8fefa;
+.card .features li img {
+  width: 13px;
+  margin-right: 10px;
 }
 
-.pricing-yearly .iconicfill-check {
-  color: #83cea7;
+.card .features li a {
+  color: #10182f;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
 }
 
-@media only screen and (max-width: 1024px) {
-  .pricing-table-wrapper {
-		margin-left: 0;
-		max-width: none;
-	}
-  
-	.pricing-table {
-		display: block;
-		margin-left: 0;
-		width: auto;
-	}
+/* Let's write the media query */
+@media (max-width: 576px) {
+  body {
+    padding: 10px;
+  }
+
+  .card {
+    width: 100%;
+    margin: 10px;
+  }
+
+  .card .features {
+    padding: 30px 50px 40px;
+  }
 }
 
 
@@ -376,20 +308,136 @@ body {
         </div>
       </div>
 
+      <div class="pricing">
+      
+        <div class="card">
+          <div class="header">
+            <span class="license">hobby</span>
+            <h2>$29</h2>
+            <span class="duration">/month</span>
+            <a href="#" class="btn">Get started</a>
+          </div>
+          <ul class="features">
+            <li>
+              <img src="images/checkmark.png" />
+              <a href="#">250 Subscribers</a>
+            </li>
+            <li>
+              <img src="images/checkmark.png" />
+              <a href="#">5 Team Members</a>
+            </li>
+            <li>
+              <img src="images/checkmark.png" />
+              <a href="#">5 Metrics</a>
+            </li>
+            <li>
+              <img src="images/checkmark.png" />
+              <a href="#">Email Notifications</a>
+            </li>
+            <li>
+              <img src="images/checkmark.png" />
+              <a href="#">Basic Customization</a>
+            </li>
+            <li>
+              <img src="images/checkmark.png" />
+              <a href="#">Status & Authenticated API</a>
+            </li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="header">
+            <span class="license">startup</span>
+            <h2>18,000 INR / 250 USD</h2>
+            <span class="duration">/month</span>
+            <a href="#" class="btn">Choose This Plan</a>
+          </div>
+          <ul class="features">
+            <li>
+              <img src="images/checkmark.png" />
+              <a href="#">Ads Spend - Rs 10,000.</a>
+            </li>
+            <li>
+              <img src="images/checkmark.png" />
+              <a href="#">Our Management Fee - 8,000</a>
+            </li>
+            <li>
+              <img src="images/checkmark.png" />
+              <a href="#">10 Metrics</a>
+            </li>
+            <li>
+              <img src="images/checkmark.png" />
+              <a href="#">Email/SMS/Webhook Notifications</a>
+            </li>
+            <li>
+              <img src="images/checkmark.png" />
+              <a href="#">Custom CSS</a>
+            </li>
+            <li>
+              <img src="images/checkmark.png" />
+              <a href="#">Status & Authenticated API</a>
+            </li>
+            <li>
+              <img src="images/checkmark.png" />
+              <a href="#">Team Member SSO</a>
+            </li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="header">
+            <span class="license">enterprise</span>
+            <h2>$399</h2>
+            <span class="duration">/month</span>
+            <a href="#" class="btn">Get started</a>
+          </div>
+          <ul class="features">
+            <li>
+              <img src="images/checkmark.png" />
+              <a href="#">5,000 Subscribers</a>
+            </li>
+            <li>
+              <img src="images/checkmark.png" />
+              <a href="#">25 Team Members</a>
+            </li>
+            <li>
+              <img src="images/checkmark.png" />
+              <a href="#">25 Metrics</a>
+            </li>
+            <li>
+              <img src="images/checkmark.png" />
+              <a href="#">Email/SMS/Webhook Notifications</a>
+            </li>
+            <li>
+              <img src="images/checkmark.png" />
+              <a href="#">Custom CSS/HTML/JS</a>
+            </li>
+            <li>
+              <img src="images/checkmark.png" />
+              <a href="#">Team Member SSO</a>
+            </li>
+            <li>
+              <img src="images/checkmark.png" />
+              <a href="#">Component Subscriptions</a>
+            </li>
+            <li>
+              <img src="images/checkmark.png" />
+              <a href="#">Yearly PO & Invoicing Available</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
     
   
       <!-- Base typography-->
 
       
-      <div class="wrapper">
+      <!-- <div class="wrapper">
 
         <div style="text-align: center; margin-bottom: 40px;">
           <h2 class="pricingTable-title" style="font-size: 40px; color: blue;">Find a plan that's right for you.</h2>
       <h3 class="pricingTable-subtitle" style="font-size: 30px; margin-top: 8px; color: blue;">Every plan has its own benefits.</h3>
     </div>
-      <!-- </div> -->
-        <!-- <h2 class="pricingTable-title">Find a plan that's right for you.</h2>
-  <h3 class="pricingTable-subtitle">Every plan comes with a 30-day   free trial.</h3> -->
+      
   
         <div class="pricing-table-wrapper">
          
@@ -412,7 +460,6 @@ body {
               <button class="signup" href="#">Choose This Plan</button>
             </div>
           </div>
-          <!--  end pricing-table -->
           
           <div class="pricing-table pricing-half-yearly">
             <div class="pricing-table-header">
@@ -431,7 +478,7 @@ body {
               <button class="signup" href="#">Choose This PlaN</button>
             </div>
           </div>
-          <!--  end pricing-table -->
+          
           
           <div class="pricing-table pricing-yearly popular">
             <div class="pricing-table-header">
@@ -451,7 +498,6 @@ body {
               <button class="signup" href="#">Choose This Plan</button>
             </div>
           </div>
-          <!--  end pricing-table -->
           <div class="pricing-table pricing-monthly">
             <div class="pricing-table-header">
               <h1>Unlimited <strong>Monthly</strong></h1>
@@ -471,9 +517,7 @@ body {
           </div>
           
         </div>
-        <!-- / end pricing-table-wraper -->
-        
-      </div>
+      </div> -->
       
       <!-- Page Footer-->
       <!-- <a class="banner" href="https://www.templatemonster.com/intense-multipurpose-html-template.html" target="_blank"><img src="images/intense_big_02.jpg" alt=""/></a> -->
@@ -575,6 +619,8 @@ body {
     <script src="js/script.js"></script>
   </body>
 </html>
+
+
 
 
 
