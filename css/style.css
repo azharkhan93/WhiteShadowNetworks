@@ -10060,8 +10060,8 @@ html.tablet .ui-to-top {
 	top: -56px;
 	bottom: -56px;
 	z-index: 1079;
-	width: 270px;
-	padding: 112px 0 81px;
+	width: 500px;
+	padding: 140px 0 81px;
 	overflow-y: auto;
 	overflow-x: hidden;
 	-webkit-overflow-scrolling: touch;
