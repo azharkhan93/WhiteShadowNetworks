@@ -10036,7 +10036,7 @@ html.tablet .ui-to-top {
 }
 
 .rd-navbar-fixed .rd-navbar-brand img {
-	max-width: 160px;
+	max-width: 90px;
 	max-height: 58px;
 	width: auto;
 	height: auto;
@@ -10050,8 +10050,8 @@ html.tablet .ui-to-top {
 	z-index: 1080;
 	display: flex;
 	align-items: center;
-	height: 56px;
-	padding: 8px;
+	height: 80px;
+	/* padding: 8px; */
 }
 
 .rd-navbar-fixed .rd-navbar-nav-wrap {
