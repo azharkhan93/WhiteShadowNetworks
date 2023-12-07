@@ -7140,7 +7140,7 @@ html:not(.tablet):not(.mobile) .profile-minimal-caption {
 
 @media (max-width: 767.98px) {
 	.jumbotron-classic-content {
-		margin-top: 50px;
+		margin-top: 55px;
 		 /* padding: 60px 0 80px  0;  */
 	}
 }
