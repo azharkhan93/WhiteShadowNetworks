@@ -14,200 +14,178 @@
     
     <style>
       
-      /* Fonts */
-@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
-
-/* icons */
-@import url(http://weloveiconfonts.com/api/?family=iconicfill);
-
-
-
-
-
-
-
-/* * { margin: 0; padding: 0; box-sizing: border-box; position: relative; } */
-
-
-
-
-/* layout */
-.wrapper {
-	max-width: 1140px;
-	margin: 1.5em auto;
-  padding: 0 1.5em;
-  font-family: 'Lato', sans-serif;
+      .pricing-table-container {
+  font-family: "Raleway", sans-serif;
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+  align-items: flex-end;
 }
 
-.pricing-table-wrapper
-{
-	margin-left: -3%;
-	max-width: 105%;
+.pricing-table-container .table {
+  width: 300px;
+  background: #e2f7ff;
+  border-radius: 24px;
+  padding: 16px 0 8px 0;
+  margin: 0 16px;
+  box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.2);
+  transition: all 500ms ease;
 }
 
-.pricing-table 
-{
-  background: #fff;
-  border-radius: 6px;
-  border: 1px solid #e8e8e8;
-  border-bottom: 2px solid #e8e8e8;
-	display: inline-block;
-  margin-bottom: 1.5em;
-	margin-left: 3%;
-	margin-right: -.25em;
-  min-height: 200px;
-	overflow: hidden;
-	vertical-align: top;
-  width: 30.38%;
+.pricing-table-container .table:hover {
+  transform: scale(1.02);
 }
 
-/* header */
-.pricing-table-header {
-  background: rgba(231, 13, 13, 0.35);
-  text-align: center;
+.pricing-table-container h2 {
+  font-size: 32px;
+  font-weight: 900;
+  color: #204959;
+  padding: 0 32px;
 }
 
-.pricing-table-header h1 {
-  color: #fff;
-  font-size: 1.4em;
-  font-weight: 300;
-  letter-spacing: 0.05em;
-  padding: 40px 0;
-}
-
-.pricing-table-header h2 {
-  background: rgba(27, 23, 23, 0.35);
-  color: #fff;
-  font-size: 1em;
-  font-weight: 300;
-  letter-spacing: 0.05em;
-  line-height: 50px;
-  height: 50px;
-  text-transform: uppercase;
-}
-
-.popular h1 {
-  padding: 40px 0 10px;
-}
-
-.popular .sub {
-  color: #c4c4c4;
-  /* text-transform: uppercase; */
-  padding-bottom: 24px;
-  display: block;
-}
-
-/* .strike {
-  color: blueviolet;
-  text-decoration: line-through;
-} */
-
-/* list */
-.pricing-table-content {
-  background: whitesmoke;
-  border: 1px solid blue;
-  border-bottom-right-radius: 6px;
-  border-bottom-left-radius: 6px;
-  border-top: 0;
-  margin: 0 2em 2em;
-}
-
-.pricing-table-content li {
-  line-height: 1.5;
-  padding: 0.75em 0;
-  width: 100%;
-}
-
-.iconicfill-check {
-  color: blue;
-  padding: 0 1em 0 1.5em;
+.pricing-table-container p {
+  font-size: 15px;
+  color: #001219;
+  padding: 0 15px;
+  line-height: 2;
   margin: 0;
 }
 
-.pricing-details {
-  color: #3a3937;
-  font-size: 1.1em;
-  line-height: 3em;
+.pricing-table-container .price {
+  /* font-size: 70px; */
+  font-weight: 900;
+  padding: 32px;
+  padding-top: 0;
+  color: #001219;
+}
+
+
+
+.pricing-table-container .features {
+  background: #7dd0ff;
+  border-radius: 24px;
+  position: relative;
+}
+
+.pricing-table-container .features::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 8px;
+  height: 90%;
+  background: #001219;
+  transform: translateY(-50%);
+  border-radius: 24px;
+  z-index: 200;
+}
+
+.pricing-table-container .features ul {
+  padding: 24px 0;
   list-style: none;
-  padding: 1em 0;
+  padding-bottom: 0;
 }
 
-/* button */
-.signup {
-  background: blue;
-  border: none;
-  border-radius: 6px;
-  color: #fff;
-  cursor: pointer;
-  display: block;
-  font-family: 'Lato', sans-serif;
-  font-size: 0.9em;
+.pricing-table-container .features ul li {
+  margin: 8px 0;
+  font-size: 18px;
   font-weight: 700;
-  letter-spacing: 0.05em;
-  margin: 0 auto 2.250em;
-  padding: 15px 0;
-  text-align: center;
+  padding: 16px 32px;
+  color: #001219;
+  transition: all 500ms ease;
+  position: relative;
+}
+
+.pricing-table-container .features ul li:hover {
+  background: #abe4ef;
+}
+
+.pricing-table-container .features ul li::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background: #001219;
+  opacity: 0;
+  transition: all 500ms ease;
+}
+
+.pricing-table-container .features ul li:hover::before {
+  opacity: 1;
+}
+
+.pricing-table-container .btn {
+  background: #001219;
+  display: inline-block;
+  padding: 12px 32px;
+  color: #fff;
   text-decoration: none;
-  text-transform: uppercase;
-  width: 88%;
+  font-weight: 700;
+  margin: 0 32px;
+  border-radius: 24px;
+  margin-bottom: 24px;
+  transition: all 500ms ease;
 }
 
-/* plan colors */
-.pricing-half-yearly h2, .pricing-half-yearly .signup {
-  background: blue !important;
+.pricing-table-container .btn:hover {
+  background: #022e3f;
 }
 
-.pricing-half-yearly .pricing-details {
-  background: whitesmoke;
+.pricing-table-container .table.best-value {
+  background: #091418;
+  position: relative;
 }
 
-.pricing-half-yearly .iconicfill-check {
-  color: blue;
+.pricing-table-container .table.best-value p,
+.pricing-table-container .table.best-value .price {
+  color: #fff;
 }
 
-.pricing-yearly h2, .pricing-yearly .signup {
-  background: blue;
+.pricing-table-container .table.best-value h2 {
+  color: #7dd0ff;
 }
 
-.pricing-yearly .pricing-details {
-  background: #f8fefa;
+.pricing-table-container .table.best-value .tag-icon {
+  position: absolute;
+  top: -22px;
+  right: 22px;
 }
 
-.pricing-yearly .iconicfill-check {
-  color: blue;
+.pricing-table-container .table.best-value .tag-text {
+  position: absolute;
+  left: 19px;
+  top: 22px;
+  color: #fff;
+  font-weight: 700;
 }
 
-@media only screen and (max-width: 1024px) {
-  .pricing-table-wrapper {
-		margin-left: 0;
-		max-width: none;
-	}
-  .iconicfill-check {
-    color: blue;
-    padding: 0 1em 0 1.5em;
-    margin: 0;
-}
-  
-	.pricing-table {
-		display: block;
-		margin-left: 0;
-		width: auto;
-	}
-  .pricingTable-title{
-    font-size: 40px;
-  }
-  .pricingTable-subtitle{
-    font-size: 30px;
+@media (max-width: 1000px) {
+  .pricing-table-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 42px;
   }
 
-}
-@media only screen and (max-width: 768px) {
-  
-  .pricingTable-title{
+  .pricing-table-container .table {
+    width: 90%;
+    max-width: 500px;
+  }
+
+  .pricing-table-container h2 {
+    margin-bottom: 8px;
+    margin-top: 8px;
+  }
+
+  .pricing-table-container .price {
     font-size: 20px;
+    padding: 12px 32px;
   }
-  .pricingTable-subtitle{
-    font-size: 15px;
+
+  .pricing-table-container .features ul li {
+    margin: 0;
+    font-size: 16px;
   }
 }
 
@@ -402,129 +380,83 @@
     
   
       <!-- Base typography-->
-
-      <section >
-      <div class="wrapper" >
-
-        <!-- <div style="text-align: center;">
-          <h2 class="pricingTable-title" style="font-size: 40px; color: blue; margin-top: 30px;">Find a plan that's right for you.</h2>
-      <h3 class="pricingTable-subtitle" style="font-size: 30px; margin-top: 8px; color: blue;">Every plan has its own benefits.</h3>
-    </div> -->
-      
+      <div style="text-align: center;">
+        <h2 class="pricingTable-title" style=" color: black; margin-top: 30px;">Find a plan that's right for you.</h2>
+    <h3 class="pricingTable-subtitle" style=" margin-top: 8px; color: black;">Every plan has its own benefits.</h3>
+  </div>
+      <div class="pricing-table-container">
+        <div class="table wow slideInLeft">
+          <h2>Basic</h2>
+          <p>The best plan for beginners</p>
+          <div class="price">18,000 INR/250 USD/Month</div>
   
-        <div class="pricing-table-wrapper"  >
-          <div style="text-align: center;">
-            <h2 class="pricingTable-title" style=" color: blue; margin-top: 30px;">Find a plan that's right for you.</h2>
-        <h3 class="pricingTable-subtitle" style=" margin-top: 8px; color: blue;">Every plan has its own benefits.</h3>
-      </div>
-        <div style="box-shadow: rgba(206, 9, 15, 15) 30px 30px 30px; margin-top: 20px; border-radius: 10px;">
-          <div class="pricing-table pricing-monthly wow slideInLeft" style="background: linear-gradient(90deg, rgba(21,21,179,1) 35%, rgba(2,0,36,1) 100%); margin-top: 20px; box-shadow: rgba(0, 0, 0, 0.35) 0px 30px 30px;">
-            <div class="pricing-table-header">
-              <h1>Basic </h1>
-              <h2><strong>18,000 INR/250 USD</strong>/Monthly</h2>
-            </div>
-            <div class="pricing-table-content" style="box-shadow: rgba(231, 13, 13, 0.35) 0px 30px 30px;" >
-              <ul class="pricing-details">
-                <li class="pricing-list"><span class="iconicfill-check"></span>Ads Spend - Rs 10,000.
-                  </li>
-                <li class="pricing-list"><span class="iconicfill-check"></span>Our Management Fee - 8,000</li>
-                <li class="pricing-list"><span class="iconicfill-check"></span>Account Management - 2</li>
-                <li class="pricing-list"><span class="iconicfill-check"></span>Creation of Campaign - 1</li>
-                <li class="pricing-list"><span class="iconicfill-check"></span>Unbeatable Customer Support</li>
-              </ul>
-              <button class="signup" href="#">Choose This Plan</button>
-            </div>
+          <div class="features">
+            <ul>
+              <li>Ads Spend - Rs 10,000</li>
+              <li>Our Management Fee - 8,000</li>
+              <li>Creation of Campaign - 1</li>
+              <li>Account Management - 2</li>
+            </ul>
+  
+            <a href="#" class="btn">Choose Plan</a>
           </div>
-          
-          
-          
-          <div class="pricing-table pricing-half-yearly" style="background: linear-gradient(90deg, rgba(21,21,179,1) 35%, rgba(2,0,36,1) 100%); margin-top: 20px;">
-            <div class="pricing-table-header" style="box-shadow: rgba(231, 13, 13, 0.35) 0px 30px 30px;">
-              <h1>Professional</h1>
-              <h2><strong>35,000 INR/500 USD</strong>/Monthly</h2>
-            </div>
-            <div class="pricing-table-content" style="box-shadow: rgba(231, 13, 13, 0.35) 0px 30px 30px;">
-              <ul class="pricing-details">
-                <li class="pricing-list"><span class="iconicfill-check"></span> Ads Spend - Rs 20,000</li>
-                <li class="pricing-list"><span class="iconicfill-check"></span>Our Management Fee - 15,000</li>
-                <li class="pricing-list"><span class="iconicfill-check"></span>Account Management - 3</li>
-                <li class="pricing-list"><span class="iconicfill-check"></span>Creation of Campaign - 3</li>
-                <li class="pricing-list"><span class="iconicfill-check"></span>Unbeatable Customer Support</li>
-                <!-- <li class="pricing-list"><span class="iconicfill-check"></span>20 - 30 New Uploads Monthly</li> -->
-              </ul>
-              <button class="signup" href="#">Choose This PlaN</button>
-            </div>
-          </div>
-
-          <!--  end pricing-table -->
-          <div class="pricing-table pricing-yearly popular" style="background: linear-gradient(90deg, rgba(21,21,179,1) 35%, rgba(2,0,36,1) 100%);margin-top: 20px;">
-            <div class="pricing-table-header wow slideInRight" style="box-shadow: rgba(231, 13, 13, 0.35) 0px 30px 30px;">
-              <h1 style="margin-bottom: 28px;">Advanced</h1>
-              <h2><strong> <span >65,000 INR / 900 USD</span></strong>/Monthly</h2>
-            </div>
-            <!-- <div class="pricing-table-header">
-              <h1> Advanced</h1>
-              <h2><strong> <span >65,000 INR / 900 USD</span></strong>/Monthly</h2>
-              
-            </div> -->
-            <div class="pricing-table-content wow slideInRight" style="box-shadow: rgb(20, 121, 228) 0px 20px 30px -10px;">
-              <ul class="pricing-details">
-                <li class="pricing-list"><span class="iconicfill-check"></span>Ads Spend - Rs 40,000</li>
-                <li class="pricing-list"><span class="iconicfill-check"></span>Our Management Fee - 25,000</li>
-                <li class="pricing-list"><span class="iconicfill-check"></span>Account Management - 5</li>
-                <li class="pricing-list"><span class="iconicfill-check"></span>Creation of Campaign - 5</li>
-                <li class="pricing-list"><span class="iconicfill-check"></span>Unbeatable Customer Support</li>
-                <!-- <li class="pricing-list"><span class="iconicfill-check"></span>20 - 30 New Uploads Monthly</li> -->
-              </ul>
-              <button class="signup" href="#">Choose This Plan</button>
-            </div>
-
-          </div>
-          </div>
-          <!--  end pricing-table -->
-          
-          <!-- <div class="pricing-table pricing-yearly popular">
-            <div class="pricing-table-header">
-              <h1> Advanced</h1>
-              <span class="sub" style="font-size: large;">Most Popular</span>
-              <h2><strong> <span >65,000 INR / 900 USD</span></strong>/Monthly</h2>
-            </div>
-            <div class="pricing-table-content">
-              <ul class="pricing-details">
-                <li class="pricing-list"><span class="iconicfill-check"></span>Ads Spend - Rs 40,000</li>
-                <li class="pricing-list"><span class="iconicfill-check"></span>Our Management Fee - 25,000</li>
-                <li class="pricing-list"><span class="iconicfill-check"></span>Account Management - 5</li>
-                <li class="pricing-list"><span class="iconicfill-check"></span>Creation of Campaign - 5</li>
-                <li class="pricing-list"><span class="iconicfill-check"></span>Unbeatable Customer Support</li>
-                
-              </ul>
-              <button class="signup" href="#">Choose This Plan</button>
-            </div>
-          </div> -->
-          <!--  end pricing-table -->
-          <!-- <div class="pricing-table pricing-monthly">
-            <div class="pricing-table-header">
-              <h1>Unlimited <strong>Monthly</strong></h1>
-              <h2><strong>Only $34.00</strong> / month</h2>
-            </div>
-            <div class="pricing-table-content">
-              <ul class="pricing-details">
-                <li class="pricing-list"><span class="iconicfill-check"></span>Get Unlimited Downloads!</li>
-                <li class="pricing-list"><span class="iconicfill-check"></span>No Download Caps</li>
-                <li class="pricing-list"><span class="iconicfill-check"></span>All 100% Royalty Free</li>
-                <li class="pricing-list"><span class="iconicfill-check"></span>No Contract / Cancel Anytime</li>
-                <li class="pricing-list"><span class="iconicfill-check"></span>Unbeatable Customer Support</li>
-                <li class="pricing-list"><span class="iconicfill-check"></span>20 - 30 New Uploads Monthly</li>
-              </ul>
-              <button class="signup" href="#">Choose This Plan</button>
-            </div>
-          </div> -->
-          
         </div>
-        <!-- / end pricing-table-wraper -->
-        
+  
+        <div class="table best-value wow slideInDown">
+          <div class="tag-icon">
+            <span class="tag-text">Best Value</span>
+            <svg
+              width="77"
+              height="88"
+              viewBox="0 0 77 88"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6.01136 10.7949C7.11064 8.74589 9.71941 8.0628 11.6818 9.31015L28.5 20L24.2491 22L-1.65478e-05 22L6.01136 10.7949Z"
+                fill="#A61C1C"
+              />
+              <path
+                d="M6.20434 12.2181C5.89966 9.82756 7.76237 7.71236 10.1722 7.71236L62.1788 7.71236C64.1616 7.71236 65.8452 9.16499 66.1356 11.1264L75.3885 73.6136C75.8283 76.5839 72.9605 78.9618 70.123 77.9794L45.6301 69.5L21.1255 84.5955C18.6504 86.1202 15.4271 84.5792 15.0596 81.6956L6.20434 12.2181Z"
+                fill="#FF4D4D"
+              />
+            </svg>
+          </div>
+          <h2>Professional</h2>
+          <p>The best plan for intermediate Users</p>
+          <div class="price">35,000 INR/500 USD/Month</div>
+  
+          <div class="features">
+            <ul>
+              <li>Ads Spend - Rs 20,000</li>
+              <li>Our Management Fee - 15,000</li>
+              <li>Account Management - 3</li>
+              <li>Creation of Campaign - 3</li>
+            </ul>
+  
+            <a href="#" class="btn">Choose Plan</a>
+          </div>
+        </div>
+  
+        <div class="table wow slideInRight">
+          <h2>Advanced</h2>
+          <p>The best plan for advanced users</p>
+          <div class="price">65,000 INR / 900 US</div>
+  
+          <div class="features">
+            <ul>
+              <li>Ads Spend - Rs 40,000</li>
+              <li>Our Management Fee - 25,000</li>
+              <li>Account Management - 5</li>
+              <li>Creation of Campaign - 5</li>
+            </ul>
+  
+            <a href="#" class="btn">Choose Plan</a>
+          </div>
+        </div>
       </div>
-    </section>
+
+      
       
       <!-- Page Footer-->
       <!-- <a class="banner" href="https://www.templatemonster.com/intense-multipurpose-html-template.html" target="_blank"><img src="images/intense_big_02.jpg" alt=""/></a> -->
@@ -640,7 +572,7 @@
                 <div class="container" >
                   <div class="footer-advanced-layout"><a class="brand" href="index.html"><img style="border-radius: 14px;" src="images/whiteshadow.jpg" alt="" width="100" height="34" srcset="images/whiteshadow.jpg 2x"/></a>
                     <!-- Rights-->
-                    <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span> All Rights Reserved. Designed
+                    <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span> All Rights Reserved. Design
                       by <a href="#" style="color:red; font-size: medium;">Azhar Ahmad</a></p>
                   </div>
                 </div>
@@ -840,3 +772,89 @@
 
     <!-- Template Stylesheet -->
     <!-- <link href="css/style.css" rel="stylesheet"> -->
+
+
+
+    <section >
+      <div class="wrapper" >
+
+        
+        
+      
+  
+        <div class="pricing-table-wrapper"  >
+          <div style="text-align: center;">
+            <h2 class="pricingTable-title" style=" color: blue; margin-top: 30px;">Find a plan that's right for you.</h2>
+        <h3 class="pricingTable-subtitle" style=" margin-top: 8px; color: blue;">Every plan has its own benefits.</h3>
+      </div>
+        <div style="box-shadow: rgba(206, 9, 15, 15) 30px 30px 30px; margin-top: 20px; border-radius: 10px;">
+          <div class="pricing-table pricing-monthly wow slideInLeft" style="background: linear-gradient(90deg, rgba(21,21,179,1) 35%, rgba(2,0,36,1) 100%); margin-top: 20px; box-shadow: rgba(0, 0, 0, 0.35) 0px 30px 30px;">
+            <div class="pricing-table-header">
+              <h1>Basic </h1>
+              <h2><strong>18,000 INR/250 USD</strong>/Monthly</h2>
+            </div>
+            <div class="pricing-table-content" style="box-shadow: rgba(231, 13, 13, 0.35) 0px 30px 30px;" >
+              <ul class="pricing-details">
+                <li class="pricing-list"><span class="iconicfill-check"></span>Ads Spend - Rs 10,000.
+                  </li>
+                <li class="pricing-list"><span class="iconicfill-check"></span>Our Management Fee - 8,000</li>
+                <li class="pricing-list"><span class="iconicfill-check"></span>Account Management - 2</li>
+                <li class="pricing-list"><span class="iconicfill-check"></span>Creation of Campaign - 1</li>
+                <li class="pricing-list"><span class="iconicfill-check"></span>Unbeatable Customer Support</li>
+              </ul>
+              <button class="signup" href="#">Choose This Plan</button>
+            </div>
+          </div>
+          
+          
+          
+          <div class="pricing-table pricing-half-yearly" style="background: linear-gradient(90deg, rgba(21,21,179,1) 35%, rgba(2,0,36,1) 100%); margin-top: 20px;">
+            <div class="pricing-table-header" style="box-shadow: rgba(231, 13, 13, 0.35) 0px 30px 30px;">
+              <h1>Professional</h1>
+              <h2><strong>35,000 INR/500 USD</strong>/Monthly</h2>
+            </div>
+            <div class="pricing-table-content" style="box-shadow: rgba(231, 13, 13, 0.35) 0px 30px 30px;">
+              <ul class="pricing-details">
+                <li class="pricing-list"><span class="iconicfill-check"></span> Ads Spend - Rs 20,000</li>
+                <li class="pricing-list"><span class="iconicfill-check"></span>Our Management Fee - 15,000</li>
+                <li class="pricing-list"><span class="iconicfill-check"></span>Account Management - 3</li>
+                <li class="pricing-list"><span class="iconicfill-check"></span>Creation of Campaign - 3</li>
+                <li class="pricing-list"><span class="iconicfill-check"></span>Unbeatable Customer Support</li>
+                <!-- <li class="pricing-list"><span class="iconicfill-check"></span>20 - 30 New Uploads Monthly</li> -->
+              </ul>
+              <button class="signup" href="#">Choose This PlaN</button>
+            </div>
+          </div>
+
+          <!--  end pricing-table -->
+          <div class="pricing-table pricing-yearly popular" style="background: linear-gradient(90deg, rgba(21,21,179,1) 35%, rgba(2,0,36,1) 100%);margin-top: 20px;">
+            <div class="pricing-table-header wow slideInRight" style="box-shadow: rgba(231, 13, 13, 0.35) 0px 30px 30px;">
+              <h1 style="margin-bottom: 28px;">Advanced</h1>
+              <h2><strong> <span >65,000 INR / 900 USD</span></strong>/Monthly</h2>
+            </div>
+            <!-- <div class="pricing-table-header">
+              <h1> Advanced</h1>
+              <h2><strong> <span >65,000 INR / 900 USD</span></strong>/Monthly</h2>
+              
+            </div> -->
+            <div class="pricing-table-content wow slideInRight" style="box-shadow: rgb(20, 121, 228) 0px 20px 30px -10px;">
+              <ul class="pricing-details">
+                <li class="pricing-list"><span class="iconicfill-check"></span>Ads Spend - Rs 40,000</li>
+                <li class="pricing-list"><span class="iconicfill-check"></span>Our Management Fee - 25,000</li>
+                <li class="pricing-list"><span class="iconicfill-check"></span>Account Management - 5</li>
+                <li class="pricing-list"><span class="iconicfill-check"></span>Creation of Campaign - 5</li>
+                <li class="pricing-list"><span class="iconicfill-check"></span>Unbeatable Customer Support</li>
+                <!-- <li class="pricing-list"><span class="iconicfill-check"></span>20 - 30 New Uploads Monthly</li> -->
+              </ul>
+              <button class="signup" href="#">Choose This Plan</button>
+            </div>
+
+          </div>
+          </div>
+          
+          
+        </div>
+        
+        
+      </div>
+    </section>
