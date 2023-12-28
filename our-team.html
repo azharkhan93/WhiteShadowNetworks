@@ -302,9 +302,15 @@
     background-image: -ms-linear-gradient(top, #FFEB3C 0%, #ff9600 100%);
     background-image: -moz-linear-gradient(top, #FFEB3C 0%, #ff9600 100%);
     background-image: -o-linear-gradient(top, #FFEB3C 0%, #ff9600 100%);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFEB3C), color-stop(100, #ff9600));
+    /* background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFEB3C), color-stop(100, #ff9600)); */
     background-image: -webkit-linear-gradient(top, #FFEB3C 0%, #ff9600 100%);
     background-image: linear-gradient(to bottom, #FFEB3C 0%, #ff9600 100%);
+}
+@media (max-width: 500px) {
+  .team-block .inner-box .lower-content .designation {
+    
+    font-size: 18px;
+}
 }
 
 
@@ -401,7 +407,7 @@
                 <div class="sec-title centered">
                     <div class="title">Our Team</div>
                     <div class="separator"><span></span></div>
-                    <h2>Lorem Ipsum dummy text</h2>
+                    <h2>Meet Our Amazing Team</h2>
                 </div>
     
                 <div class="row clearfix">
@@ -430,6 +436,7 @@
                         <div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
                             <ul class="social-icons">
                                 <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <!-- <li><a href="#"><i class="fab fa-instagram"></i></a></li> -->
                                 <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                                 <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                                 <!-- <li><a href="#"><i class="fab fa-skype"></i></a></li> -->
