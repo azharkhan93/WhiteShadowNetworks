@@ -9197,7 +9197,7 @@ html:not(.lt-ie10) .not-animated {
 
 .ui-to-top:hover {
 	color: #fff;
-	background: #4854ed;
+	/* background: #4854ed; */
 	text-decoration: none;
 }
 
@@ -17946,79 +17946,7 @@ html[data-x-mode]:not(.lt-ie10) .not-animated {
 	}
 }
 
-/* *{
-    margin: 0;
-    padding: 0;
-    font-family: "Open Sans",sans-serif;
-    box-sizing: border-box;
-}
 
-body{
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f1f1f1;
-} */
-
-.about-section{
-	
-	/* margin-top: -20px; */
-    background: url('/images/who.jpeg') no-repeat left;
-    background-size: 60%;
-    background-color: #fdfdfd;
-    overflow: hidden;
-    /* padding: 100px 0; */
-	 /* border-radius: 15px;  */
-}
-
-.inner-container{
-    width: 60%;
-    float: right;
-    background-color: bisque;
-	/* box-shadow: #000000; */
-    padding: 100px;
-	border-radius: 5px;
-}
-
-.inner-container h1{
-	color: #007aff;
-	text-decoration: underline;
-    margin-bottom: 30px;
-    font-size: 30px;
-    font-weight: 900;
-}
-
-.text{
-    font-size: 15px;
-    color: #545454;
-    line-height: 30px;
-    text-align: justify;
-    margin-bottom: 40px;
-}
-
-.skills{
-    display: flex;
-    justify-content: space-between;
-    font-weight: 700;
-    font-size: 13px;
-}
-
-@media screen and (max-width:1200px){
-    .inner-container{
-        padding: 80px;
-    }
-}
-
-@media screen and (max-width:1000px){
-    .about-section{
-        background-size: 100%;
-        padding: 100px 40px;
-    }
-    .inner-container{
-        width: 100%;
-    }
-}
 
 /* body {
 	background: bisque;
