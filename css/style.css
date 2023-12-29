@@ -9121,7 +9121,7 @@ html:not(.lt-ie10) .not-animated {
 }
 
 .loadingProgressG {
-	background: #007bff;
+	background: black;
 	margin-top: 0;
 	margin-left: -100vw;
 	animation-name: bounce_loadingProgressG;
@@ -9150,7 +9150,7 @@ html:not(.lt-ie10) .not-animated {
 	position: fixed;
 	right: 15px;
 	bottom: 15px;
-	z-index: 300;
+	z-index: 500;
 	width: 48px;
 	height: 48px;
 	border-radius: 6px;
