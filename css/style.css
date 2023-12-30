@@ -9197,7 +9197,7 @@ html:not(.lt-ie10) .not-animated {
 
 .ui-to-top:hover {
 	color: #fff;
-	/* background: #4854ed; */
+	background: #4854ed;
 	text-decoration: none;
 }
 
