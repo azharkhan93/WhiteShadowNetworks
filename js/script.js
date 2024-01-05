@@ -1323,6 +1323,11 @@ $('.clients-carousel').owlCarousel({
         }
     }
 });
+window.addEventListener('load', function () {
+	document.getElementById('preloader').style.display = 'none';
+	document.getElementById('newYearMessage').style.display = 'none';
+	document.body.style.overflow = 'auto'; // Show scrollbar after the page is fully loaded
+});
 
 
 
