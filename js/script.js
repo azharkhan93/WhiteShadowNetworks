@@ -880,7 +880,7 @@
 		if ($html.hasClass("wow-animation") && plugins.wow.length && !isNoviBuilder && isDesktop) {
 			setTimeout(function () {
 				new WOW({
-					mobile: false,
+					mobile: true,
 					live: false
 				}).init();
 			}, pageTransitionAnimationDuration);
