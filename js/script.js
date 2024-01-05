@@ -1279,9 +1279,9 @@ $('.clients-carousel').owlCarousel({
     margin: 15,
     dots: false,
     slideTransition: 'linear',
-    autoplayTimeout: 4500,
+    autoplayTimeout: 2000,
     autoplayHoverPause: true,
-    autoplaySpeed: 4500,
+    autoplaySpeed: 3000,
     responsive: {
       0: {
         items: 2
@@ -1323,11 +1323,11 @@ $('.clients-carousel').owlCarousel({
         }
     }
 });
-window.addEventListener('load', function () {
-	document.getElementById('preloader').style.display = 'none';
-	document.getElementById('newYearMessage').style.display = 'none';
-	document.body.style.overflow = 'auto'; // Show scrollbar after the page is fully loaded
-});
+// window.addEventListener('load', function () {
+// 	document.getElementById('preloader').style.display = 'none';
+// 	document.getElementById('newYearMessage').style.display = 'none';
+// 	document.body.style.overflow = 'auto'; 
+// });
 
 
 
