@@ -892,94 +892,94 @@
 		}
 
 		// MailChimp Ajax subscription
-		if (plugins.mailchimp.length) {
-			for (i = 0; i < plugins.mailchimp.length; i++) {
-				var $mailchimpItem = $(plugins.mailchimp[i]),
-						$email = $mailchimpItem.find('input[type="email"]');
+		// if (plugins.mailchimp.length) {
+		// 	for (i = 0; i < plugins.mailchimp.length; i++) {
+		// 		var $mailchimpItem = $(plugins.mailchimp[i]),
+		// 				$email = $mailchimpItem.find('input[type="email"]');
 
-				// Required by MailChimp
-				$mailchimpItem.attr('novalidate', 'true');
-				$email.attr('name', 'EMAIL');
+				
+		// 		$mailchimpItem.attr('novalidate', 'true');
+		// 		$email.attr('name', 'EMAIL');
 
-				$mailchimpItem.on('submit', $.proxy(function ($email, event) {
-					event.preventDefault();
+		// 		$mailchimpItem.on('submit', $.proxy(function ($email, event) {
+		// 			event.preventDefault();
 
-					var $this = this;
+		// 			var $this = this;
 
-					var data = {},
-							url = $this.attr('action').replace('/post?', '/post-json?').concat('&c=?'),
-							dataArray = $this.serializeArray(),
-							$output = $("#" + $this.attr("data-form-output"));
+		// 			var data = {},
+		// 					url = $this.attr('action').replace('/post?', '/post-json?').concat('&c=?'),
+		// 					dataArray = $this.serializeArray(),
+		// 					$output = $("#" + $this.attr("data-form-output"));
 
-					for (i = 0; i < dataArray.length; i++) {
-						data[dataArray[i].name] = dataArray[i].value;
-					}
+		// 			for (i = 0; i < dataArray.length; i++) {
+		// 				data[dataArray[i].name] = dataArray[i].value;
+		// 			}
 
-					$.ajax({
-						data: data,
-						url: url,
-						dataType: 'jsonp',
-						error: function (resp, text) {
-							$output.html('Server error: ' + text);
+		// 			$.ajax({
+		// 				data: data,
+		// 				url: url,
+		// 				dataType: 'jsonp',
+		// 				error: function (resp, text) {
+		// 					$output.html('Server error: ' + text);
 
-							setTimeout(function () {
-								$output.removeClass("active");
-							}, 4000);
-						},
-						success: function (resp) {
-							$output.html(resp.msg).addClass('active');
-							$email[0].value = '';
-							var $label = $('[for="' + $email.attr('id') + '"]');
-							if ($label.length) $label.removeClass('focus not-empty');
+		// 					setTimeout(function () {
+		// 						$output.removeClass("active");
+		// 					}, 4000);
+		// 				},
+		// 				success: function (resp) {
+		// 					$output.html(resp.msg).addClass('active');
+		// 					$email[0].value = '';
+		// 					var $label = $('[for="' + $email.attr('id') + '"]');
+		// 					if ($label.length) $label.removeClass('focus not-empty');
 
-							setTimeout(function () {
-								$output.removeClass("active");
-							}, 6000);
-						},
-						beforeSend: function (data) {
-							var isNoviBuilder = window.xMode;
+		// 					setTimeout(function () {
+		// 						$output.removeClass("active");
+		// 					}, 6000);
+		// 				},
+		// 				beforeSend: function (data) {
+		// 					var isNoviBuilder = window.xMode;
 
-							var isValidated = (function () {
-								var results, errors = 0;
-								var elements = $this.find('[data-constraints]');
-								var captcha = null;
-								if (elements.length) {
-									for (var j = 0; j < elements.length; j++) {
+		// 					var isValidated = (function () {
+		// 						var results, errors = 0;
+		// 						var elements = $this.find('[data-constraints]');
+		// 						var captcha = null;
+		// 						if (elements.length) {
+		// 							for (var j = 0; j < elements.length; j++) {
 
-										var $input = $(elements[j]);
-										if ((results = $input.regula('validate')).length) {
-											for (var k = 0; k < results.length; k++) {
-												errors++;
-												$input.siblings(".form-validation").text(results[k].message).parent().addClass("has-error");
-											}
-										} else {
-											$input.siblings(".form-validation").text("").parent().removeClass("has-error")
-										}
-									}
+		// 								var $input = $(elements[j]);
+		// 								if ((results = $input.regula('validate')).length) {
+		// 									for (var k = 0; k < results.length; k++) {
+		// 										errors++;
+		// 										$input.siblings(".form-validation").text(results[k].message).parent().addClass("has-error");
+		// 									}
+		// 								} else {
+		// 									$input.siblings(".form-validation").text("").parent().removeClass("has-error")
+		// 								}
+		// 							}
 
-									if (captcha) {
-										if (captcha.length) {
-											return validateReCaptcha(captcha) && errors === 0
-										}
-									}
+		// 							if (captcha) {
+		// 								if (captcha.length) {
+		// 									return validateReCaptcha(captcha) && errors === 0
+		// 								}
+		// 							}
 
-									return errors === 0;
-								}
-								return true;
-							})();
+		// 							return errors === 0;
+		// 						}
+		// 						return true;
+		// 					})();
 
-							// Stop request if builder or inputs are invalide
-							if (isNoviBuilder || !isValidated)
-								return false;
+							
+		// 					if (isNoviBuilder || !isValidated)
+		// 						return false;
 
-							$output.html('Submitting...').addClass('active');
-						}
-					});
+		// 					$output.html('Submitting...').addClass('active');
+		// 				}
+		// 			});
 
-					return false;
-				}, $mailchimpItem, $email));
-			}
-		}
+		// 			return false;
+		// 		}, $mailchimpItem, $email));
+		// 	}
+		// }
 
 		// Campaign Monitor ajax subscription
 		if (plugins.campaignMonitor.length) {
