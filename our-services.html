@@ -24,7 +24,7 @@
 
 .pricing-table-container .table {
   width: 300px;
-  background: #e2f7ff;
+  background: black;
   border-radius: 24px;
   padding: 16px 0 8px 0;
   margin: 0 16px;
@@ -39,13 +39,13 @@
 .pricing-table-container h2 {
   font-size: 32px;
   font-weight: 900;
-  color: #204959;
+  color: white;
   padding: 0 32px;
 }
 
 .pricing-table-container p {
   font-size: 15px;
-  color: #001219;
+  color: white;
   padding: 0 15px;
   line-height: 2;
   margin: 0;
@@ -56,13 +56,17 @@
   font-weight: 900;
   padding: 32px;
   padding-top: 0;
-  color: #001219;
+  color: white;
 }
 
 
 
 .pricing-table-container .features {
-  background: #7dd0ff;
+  background: #000000;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #434343, #000000);  
+background: linear-gradient(to bottom, #434343, #000000); 
+
+   /* background: #002244;  */
   border-radius: 24px;
   position: relative;
 }
@@ -74,7 +78,7 @@
   left: 0;
   width: 8px;
   height: 90%;
-  background: #001219;
+  background: white;
   transform: translateY(-50%);
   border-radius: 24px;
   z-index: 200;
@@ -91,7 +95,7 @@
   font-size: 18px;
   font-weight: 700;
   padding: 16px 32px;
-  color: #001219;
+  color: whitesmoke;
   transition: all 500ms ease;
   position: relative;
 }
@@ -144,7 +148,7 @@
 }
 
 .pricing-table-container .table.best-value h2 {
-  color: #7dd0ff;
+  color: white;
 }
 
 .pricing-table-container .table.best-value .tag-icon {
