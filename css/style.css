@@ -6,6 +6,9 @@ a:focus,
 button:focus {
 	outline: none !important;
 }
+body {
+	background-color: #000;
+}
 
 button::-moz-focus-inner {
 	border: 0;
@@ -459,10 +462,12 @@ code {
 
 .wow-outer span {
 	display: block;
+	color: white;
 }
 
 .wow-outer .wow > span {
 	display: inline;
+	color: white;
 }
 
 p [data-toggle='tooltip'] {
@@ -473,15 +478,18 @@ p [data-toggle='tooltip'] {
 
 p [style*='max-width'] {
 	display: inline-block;
+	color: white;
 }
 
 p a {
 	color: inherit;
+
 }
 
 p .text-width-1 {
 	display: inline-block;
 	max-width: 730px;
+	color: white;
 }
 
 .text-width-2 {
@@ -668,10 +676,12 @@ a[href*='tel'], a[href*='mailto'] {
 	display: flex;
 	margin-left: -15px;
 	text-align: left;
+	color: white;
 }
 
 .box-minimal > * {
 	margin-left: 15px;
+	
 }
 
 .box-chloe__icon {
@@ -704,18 +714,23 @@ a[href*='tel'], a[href*='mailto'] {
 	max-width: 320px;
 	margin-left: auto;
 	margin-right: auto;
+	color: white;
 }
 
 * + .box-minimal {
 	margin-top: 30px;
+	
 }
 
 * + .box-minimal-title {
 	margin-top: 10px;
+	color: white;
+	
 }
 
 * + .box-minimal-text {
 	margin-top: 15px;
+	
 }
 
 @media (max-width: 575.98px) {
@@ -2064,14 +2079,14 @@ button {
 
 .button-default:hover, .button-default:active {
 	color: #fff;
-	background-color: #007bff;
-	border-color: #007bff;
+	background-color: black;
+	border-color: white;
 }
 
 .button.button-primary, .button.button-primary:focus {
 	color: #fff;
-	background-color: #007bff;
-	border-color: #007bff;
+	background-color: black;
+	border-color: white;
 }
 
 .button.button-primary:hover, .button.button-primary:active {
@@ -2082,8 +2097,8 @@ button {
 
 html .button.button-primary-lighten, html .button.button-primary-lighten:focus {
 	color: #fff;
-	background-color: #007bff;
-	border-color: #007bff;
+	background-color: black;
+	border-color: white;
 }
 
 html .button.button-primary-lighten:hover, html .button.button-primary-lighten:active {
@@ -2186,6 +2201,8 @@ html .button.button-primary-lighten:hover, html .button.button-primary-lighten:a
 	display: inline-block;
 	vertical-align: middle;
 	text-align: center;
+	background: black;
+	color: white;
 }
 
 .button-winona .content-original,
@@ -2210,6 +2227,7 @@ html .button.button-primary-lighten:hover, html .button.button-primary-lighten:a
 .button-winona:hover .content-original {
 	opacity: 0;
 	transform: translate3d(0, -30%, 0);
+	color: #000;
 }
 
 .button-winona:hover .content-dubbed {
@@ -2264,7 +2282,7 @@ html .button.button-icon {
 }
 
 .button-icon:active .icon, .button-icon:hover .icon {
-	color: inherit;
+	color: black;
 }
 
 .button-icon-left .icon {
@@ -3909,16 +3927,17 @@ html img.quote-light-image {
 .quote-classic-cite {
 	font-size: 24px;
 	line-height: 1.2;
-	color: #151515;
+	color: white;
 	font-family: "Poppins", sans-serif;
 }
 
 .quote-classic-caption {
-	color: #151515;
+	color: white;
 }
 
 * + .quote-classic-text {
 	margin-top: 25px;
+	color: white;
 }
 
 * + .quote-classic-caption {
@@ -4985,7 +5004,7 @@ html:not(.tablet):not(.mobile) .thumbnail-indigo:hover .thumbnail-indigo-caption
 	display: inline-block;
 	font-size: inherit;
 	font-style: normal;
-	color: rgba(255, 255, 255, 0.5);
+	color: white;
 	transform: translate3d(0, -50%, 0);
 }
 
@@ -5380,7 +5399,7 @@ html:not(.tablet):not(.mobile) .thumbnail-indigo:hover .thumbnail-indigo-caption
 }
 
 .footer-advanced-text {
-	color: rgba(255, 255, 255, 0.3);
+	color: white;
 }
 
 @media (min-width: 768px) {
@@ -5936,20 +5955,20 @@ html:not(.tablet):not(.mobile) .profile-classic-caption {
 }
 
 .profile-creative-title a {
-	color: #151515;
+	color: white;
 	font-weight: 300;
 }
 
 .profile-creative-title a:hover {
-	color: #007bff;
+	color: grey;
 }
 
 .profile-creative-position {
-	color: #151515;
+	color: white;
 }
 
 .profile-creative-contacts {
-	color: #151515;
+	color: white;
 }
 
 .profile-creative-contacts a {
@@ -5958,7 +5977,7 @@ html:not(.tablet):not(.mobile) .profile-classic-caption {
 }
 
 .profile-creative-contacts a:hover {
-	color: #007bff;
+	color: gray;
 }
 
 * + .profile-creative-position {
@@ -6412,13 +6431,13 @@ html:not(.tablet):not(.mobile) .profile-minimal-caption {
 .counter-minimal {
 	position: relative;
 	text-align: center;
-	color: #495057;
+	color: white;
 }
 
 .counter-minimal-icon {
 	font-size: 24px;
 	line-height: 1;
-	color: #007bff;
+	color: white;
 }
 
 .counter-minimal-main {
@@ -6440,6 +6459,7 @@ html:not(.tablet):not(.mobile) .profile-minimal-caption {
 
 * + .counter-minimal-title {
 	margin-top: 10px;
+	color: white;
 }
 
 * + .counter-minimal-main {
@@ -17855,8 +17875,8 @@ html[data-x-mode]:not(.lt-ie10) .not-animated {
     transform: translate(40%, -40%);
     width: 150px;
     height: 150px;
-    background-color: #ff4500;
-    border: 6px solid #504f93;
+    background-color:  black;
+    border: 6px solid white;
     border-radius: 50%;
     opacity: 0.5;
     z-index: 10;
@@ -17877,7 +17897,7 @@ html[data-x-mode]:not(.lt-ie10) .not-animated {
 	margin-bottom: 26px;
     width: 70px;
     height: 70px;
-    background-color: #ff4500;
+    background-color: black;
     border-radius: 5px;
     line-height: 70px;
     text-align: center;
@@ -17978,6 +17998,7 @@ html[data-x-mode]:not(.lt-ie10) .not-animated {
     max-width: 100%; 
     max-height: 100%;
     width: 100%;
+	border-radius: 50px;
 }
 
 .box:hover {
