@@ -9174,8 +9174,8 @@ html:not(.lt-ie10) .not-animated {
 	width: 48px;
 	height: 48px;
 	border-radius: 6px;
-	color: #fff;
-	background: #007bff;
+	color: white;
+	background: black;
 	overflow: hidden;
 	text-align: center;
 	text-decoration: none;
@@ -9216,8 +9216,8 @@ html:not(.lt-ie10) .not-animated {
 }
 
 .ui-to-top:hover {
-	color: #fff;
-	background: #4854ed;
+	color: black;
+	background: gray;
 	text-decoration: none;
 }
 
