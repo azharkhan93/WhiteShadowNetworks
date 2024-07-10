@@ -1046,9 +1046,9 @@ $('.clients-carousel').owlCarousel({
     margin: 15,
     dots: false,
     slideTransition: 'linear',
-    autoplayTimeout: 2000,
+    autoplayTimeout: 700,
     autoplayHoverPause: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 700,
     responsive: {
       0: {
         items: 2
