@@ -70,33 +70,11 @@
 	}
 
 	$window.on('load', function () {
-    // Page loader & Page transition
-    if (plugins.preloader.length && !isNoviBuilder) {
-        // Immediately hide the preloader to avoid it getting stuck
-        plugins.preloader.addClass('loaded');
-        
-        // Optional: you can still initialize the page transition if needed
-        pageTransition({
-            target: document.querySelector('.page'),
-            delay: 0,
-            duration: pageTransitionAnimationDuration,
-            classActive: 'animated',
-            conditions: function (event, link) {
-                return !/(\#|callto:|tel:|mailto:|:\/\/)/.test(link)
-                        && !event.currentTarget.hasAttribute('data-lightgallery')
-                        && event.currentTarget.getAttribute('href') !== 'javascript:void(0);';
-            },
-            onTransitionStart: function (options) {
-                setTimeout(function () {
-                    plugins.preloader.removeClass('loaded');
-                }, options.duration * .75);
-            },
-            onReady: function () {
-                plugins.preloader.addClass('loaded');
-                windowReady = true;
-            }
-        });
-    }
+    // Since preloader is commented out, skip all preloader and page transition handling
+    windowReady = true;
+    
+    // Don't initialize page transition to avoid rendering issues
+    // The page will load normally without any transition delays
 });
 	// Initialize scripts that require a finished document
 	$(function () {
@@ -805,68 +783,68 @@
 			plugins.rdInputLabel.RDInputLabel();
 		}
 
-		// Swiper
-		if (plugins.swiper.length) {
-			for (var i = 0; i < plugins.swiper.length; i++) {
-				var s = $(plugins.swiper[i]);
-				var pag = s.find(".swiper-pagination"),
-						next = s.find(".swiper-button-next"),
-						prev = s.find(".swiper-button-prev"),
-						bar = s.find(".swiper-scrollbar"),
-						swiperSlide = s.find(".swiper-slide"),
-						autoplay = false;
+		// Swiper - Disabled to fix rendering issues
+		// if (plugins.swiper.length) {
+		// 	for (var i = 0; i < plugins.swiper.length; i++) {
+		// 		var s = $(plugins.swiper[i]);
+		// 		var pag = s.find(".swiper-pagination"),
+		// 				next = s.find(".swiper-button-next"),
+		// 				prev = s.find(".swiper-button-prev"),
+		// 				bar = s.find(".swiper-scrollbar"),
+		// 				swiperSlide = s.find(".swiper-slide"),
+		// 				autoplay = false;
 
-				for (var j = 0; j < swiperSlide.length; j++) {
-					var $this = $(swiperSlide[j]),
-							url;
+		// 		for (var j = 0; j < swiperSlide.length; j++) {
+		// 			var $this = $(swiperSlide[j]),
+		// 					url;
 
-					if (url = $this.attr("data-slide-bg")) {
-						$this.css({
-							"background-image": "url(" + url + ")",
-							"background-size": "cover"
-						})
-					}
-				}
+		// 			if (url = $this.attr("data-slide-bg")) {
+		// 				$this.css({
+		// 					"background-image": "url(" + url + ")",
+		// 					"background-size": "cover"
+		// 				})
+		// 			}
+		// 		}
 
-				swiperSlide.end()
-				.find("[data-caption-animate]")
-				.addClass("not-animated")
-				.end();
+		// 		swiperSlide.end()
+		// 		.find("[data-caption-animate]")
+		// 		.addClass("not-animated")
+		// 		.end();
 
-				s.swiper({
-					autoplay: !isNoviBuilder && $.isNumeric( s.attr('data-autoplay') ) ? s.attr('data-autoplay') : false,
-					direction: s.attr('data-direction') ? s.attr('data-direction') : "horizontal",
-					effect: s.attr('data-slide-effect') ? s.attr('data-slide-effect') : "slide",
-					speed: s.attr('data-slide-speed') ? s.attr('data-slide-speed') : 600,
-					keyboardControl: s.attr('data-keyboard') === "true",
-					mousewheelControl: s.attr('data-mousewheel') === "true",
-					mousewheelReleaseOnEdges: s.attr('data-mousewheel-release') === "true",
-					nextButton: next.length ? next.get(0) : null,
-					prevButton: prev.length ? prev.get(0) : null,
-					pagination: pag.length ? pag.get(0) : null,
-					paginationClickable: pag.length ? pag.attr("data-clickable") !== "false" : false,
-					paginationBulletRender: pag.length ? pag.attr("data-index-bullet") === "true" ? function (swiper, index, className) {
-						return '<span class="' + className + '">' + (index + 1) + '</span>';
-					} : null : null,
-					scrollbar: bar.length ? bar.get(0) : null,
-					scrollbarDraggable: bar.length ? bar.attr("data-draggable") !== "false" : true,
-					scrollbarHide: bar.length ? bar.attr("data-draggable") === "false" : false,
-					loop: isNoviBuilder ? false : s.attr('data-loop') !== "false",
-					simulateTouch: s.attr('data-simulate-touch') && !isNoviBuilder ? s.attr('data-simulate-touch') === "true" : false,
-					onTransitionStart: function (swiper) {
-						toggleSwiperInnerVideos(swiper);
-					},
-					onTransitionEnd: function (swiper) {
-						toggleSwiperCaptionAnimation(swiper);
-					},
-					onInit: function (swiper) {
-						toggleSwiperInnerVideos(swiper);
-						toggleSwiperCaptionAnimation(swiper);
-						initLightGalleryItem(s.find('[data-lightgallery="item"]'), 'lightGallery-in-carousel');
-					}
-				});
-			}
-		}
+		// 		s.swiper({
+		// 			autoplay: !isNoviBuilder && $.isNumeric( s.attr('data-autoplay') ) ? s.attr('data-autoplay') : false,
+		// 			direction: s.attr('data-direction') ? s.attr('data-direction') : "horizontal",
+		// 			effect: s.attr('data-slide-effect') ? s.attr('data-slide-effect') : "slide",
+		// 			speed: s.attr('data-slide-speed') ? s.attr('data-slide-speed') : 600,
+		// 			keyboardControl: s.attr('data-keyboard') === "true",
+		// 			mousewheelControl: s.attr('data-mousewheel') === "true",
+		// 			mousewheelReleaseOnEdges: s.attr('data-mousewheel-release') === "true",
+		// 			nextButton: next.length ? next.get(0) : null,
+		// 			prevButton: prev.length ? prev.get(0) : null,
+		// 			pagination: pag.length ? pag.get(0) : null,
+		// 			paginationClickable: pag.length ? pag.attr("data-clickable") !== "false" : false,
+		// 			paginationBulletRender: pag.length ? pag.attr("data-index-bullet") === "true" ? function (swiper, index, className) {
+		// 				return '<span class="' + className + '">' + (index + 1) + '</span>';
+		// 			} : null : null,
+		// 			scrollbar: bar.length ? bar.get(0) : null,
+		// 			scrollbarDraggable: bar.length ? bar.attr("data-draggable") !== "false" : true,
+		// 			scrollbarHide: bar.length ? bar.attr("data-draggable") === "false" : false,
+		// 			loop: isNoviBuilder ? false : s.attr('data-loop') !== "false",
+		// 			simulateTouch: s.attr('data-simulate-touch') && !isNoviBuilder ? s.attr('data-simulate-touch') === "true" : false,
+		// 			onTransitionStart: function (swiper) {
+		// 				toggleSwiperInnerVideos(swiper);
+		// 			},
+		// 			onTransitionEnd: function (swiper) {
+		// 				toggleSwiperCaptionAnimation(swiper);
+		// 			},
+		// 			onInit: function (swiper) {
+		// 				toggleSwiperInnerVideos(swiper);
+		// 				toggleSwiperCaptionAnimation(swiper);
+		// 				initLightGalleryItem(s.find('[data-lightgallery="item"]'), 'lightGallery-in-carousel');
+		// 			}
+		// 		});
+		// 	}
+		// }
 
 		// Owl carousel
 		if (plugins.owl.length) {
@@ -878,15 +856,15 @@
 			}
 		}
 
-		// WOW
-		if ($html.hasClass("wow-animation") && plugins.wow.length && !isNoviBuilder && isDesktop) {
-			setTimeout(function () {
-				new WOW({
-					mobile: false,
-					live: false
-				}).init();
-			}, pageTransitionAnimationDuration);
-		}
+		// WOW - Disabled to fix rendering issues
+		// if ($html.hasClass("wow-animation") && plugins.wow.length && !isNoviBuilder && isDesktop) {
+		// 	setTimeout(function () {
+		// 		new WOW({
+		// 			mobile: false,
+		// 			live: false
+		// 		}).init();
+		// 	}, pageTransitionAnimationDuration);
+		// }
 
 		// Regula
 		if (plugins.regula.length) {
